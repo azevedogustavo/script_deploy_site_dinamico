@@ -81,7 +81,7 @@ test_service mariadb.service
 
 # Configurando as regras no firewalld para o funcionamento do mariadb-sevrer
 color green "configurando as regras firewalld para o banco de dados"
-sudo firewall-cmd --permanent --zone=public --add-port=3306/tcp
+sudo firewall-cmd --permanent --zone=internal --add-port=3306/tcp
 # Carregando a nova configuração do firewall
 sudo firewall-cmd --reload
 # Função que verifique se as portas do firewall estão devidamente configuradas
